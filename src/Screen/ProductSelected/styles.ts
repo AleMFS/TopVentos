@@ -34,4 +34,20 @@ export const InfoProduct = styled.section`
 
     display: flex;
     
+    
+`
+
+export const Carrosel = styled.div`
+   width: 40%;
+   padding: 1rem;
+   display:flex ;
+   flex-direction :column ;
+   border-right: 1px solid black;
+   border-bottom: 1px solid black;
+
+   button{
+    padding: 1rem;
+    color: red;
+   }
+
 `
