@@ -57,7 +57,69 @@ export const ProductsContent = styled.div`
     margin: 0 auto;
     display: grid;
     grid-template-columns: 21% 1fr;
-    grid-column-gap: 2rem;      
+    grid-column-gap: 2rem;  
+    
+    strong{
+        margin-top: 0.5rem;
+    }
+
+    .container{
+        margin: 2rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        list-style: none;
+
+        li{
+            width: 2.5rem;
+            height: 2.5rem;
+            
+            cursor: pointer;
+
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            background: #114074;
+            border-radius: 6px;
+            font-size: 1.25rem;
+            color: #FFF;
+            
+            
+            
+            :hover{
+                background: #3176bf;
+            }
+           
+        }
+    }
+
+        .currentNumberPage{
+            color: #FFF;
+            background: #3176bf !important;
+            border-radius: 6px;
+
+           
+        }  
+         
+        .containerNumber{
+            width: 2.5rem;
+            height: 2.5rem;
+            
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }  
+        .arrowSelected{
+            color:  #114074 !important;
+            background: transparent !important;
+            
+        }
+        .arrowDisabled{
+            color: #CCC !important;
+            background: transparent !important ;
+        } 
 
 `
 export const Checkbox = styled.section`

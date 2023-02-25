@@ -22,7 +22,7 @@ export function FilterCheckbox() {
                     30CM
                 </label>
                 <label>
-                    <input type="checkbox" name="30" id="" />
+                    <input type="checkbox" name="40" id="" />
                     40CM
                 </label>
                 <label>

@@ -11,6 +11,7 @@ export interface FansProps {
     cor: string
     descricao: string
     imagens: string[]
+    banner?: string
 }
 
 export const Ventiladores: FansProps[] =
@@ -38,7 +39,8 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Arno/Mesa/VEPX/3.jpg',
                 '../src/assets/Ventiladores/Arno/Mesa/VEPX/4.jpg',
                 '../src/assets/Ventiladores/Arno/Mesa/VEPX/5.jpg'
-            ]
+            ],
+             banner: "https://lojaarno.vtexassets.com/assets/vtex.file-manager-graphql/images/457805de-b2fd-495c-adef-a67eebff2b8f___d8d5108b86fa551779b81a847fc520c3.png"
         },
         {
             id: 1,
@@ -60,7 +62,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Arno/Mesa/VB40/3.jpg',
                 '../src/assets/Ventiladores/Arno/Mesa/VB40/4.jpg',
                 '../src/assets/Ventiladores/Arno/Mesa/VB40/5.jpg'
-            ]
+            ], banner: "https://lojaarno.vtexassets.com/assets/vtex.file-manager-graphql/images/457805de-b2fd-495c-adef-a67eebff2b8f___d8d5108b86fa551779b81a847fc520c3.png"
         },
 
         {
@@ -83,7 +85,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Arno/Mesa/VB50/3.jpg',
                 '../src/assets/Ventiladores/Arno/Mesa/VB50/4.jpg',
                 '../src/assets/Ventiladores/Arno/Mesa/VB50/5.jpg'
-            ]
+            ], banner: "https://lojaarno.vtexassets.com/assets/vtex.file-manager-graphql/images/457805de-b2fd-495c-adef-a67eebff2b8f___d8d5108b86fa551779b81a847fc520c3.png"
         },
         {
             id: 3,
@@ -105,7 +107,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Arno/Mesa/VDBT/3.jpg',
                 '../src/assets/Ventiladores/Arno/Mesa/VDBT/4.jpg',
 
-            ]
+            ], banner: "https://lojaarno.vtexassets.com/assets/vtex.file-manager-graphql/images/457805de-b2fd-495c-adef-a67eebff2b8f___d8d5108b86fa551779b81a847fc520c3.png"
         },
         {
             id: 4,
@@ -127,7 +129,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Arno/Mesa/VB55/3.jpg',
                 '../src/assets/Ventiladores/Arno/Mesa/VB55/4.jpg',
 
-            ]
+            ], banner: "https://lojaarno.vtexassets.com/assets/vtex.file-manager-graphql/images/457805de-b2fd-495c-adef-a67eebff2b8f___d8d5108b86fa551779b81a847fc520c3.png"
         },
 
         // Arno Coluna
@@ -152,7 +154,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Arno/Coluna/VB52/3.jpg',
                 '../src/assets/Ventiladores/Arno/Coluna/VB52/4.jpg',
 
-            ]
+            ], banner: "https://lojaarno.vtexassets.com/assets/vtex.file-manager-graphql/images/457805de-b2fd-495c-adef-a67eebff2b8f___d8d5108b86fa551779b81a847fc520c3.png"
         },
         {
             id: 6,
@@ -174,7 +176,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Arno/Coluna/VFC4/3.jpg',
                 '../src/assets/Ventiladores/Arno/Coluna/VFC4/4.jpg',
 
-            ]
+            ], banner: "https://lojaarno.vtexassets.com/assets/vtex.file-manager-graphql/images/457805de-b2fd-495c-adef-a67eebff2b8f___d8d5108b86fa551779b81a847fc520c3.png"
         },
         {
             id: 8,
@@ -195,7 +197,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Arno/Coluna/VD5C/3.jpg',
                 '../src/assets/Ventiladores/Arno/Coluna/VD5C/4.jpg',
 
-            ]
+            ], banner: "https://lojaarno.vtexassets.com/assets/vtex.file-manager-graphql/images/457805de-b2fd-495c-adef-a67eebff2b8f___d8d5108b86fa551779b81a847fc520c3.png"
         },
 
         //Britânia Mesa
@@ -219,7 +221,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Britania/Mesa/Protect/3.png',
                 '../src/assets/Ventiladores/Britania/Mesa/Protect/4.png',
 
-            ]
+            ], banner: "http://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
         },
 
         {
@@ -242,7 +244,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Britania/Mesa/BVT495PA/3.png',
                 '../src/assets/Ventiladores/Britania/Mesa/BVT495PA/4.png',
 
-            ]
+            ], banner: "http://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
         },
         {
             id: 11,
@@ -265,7 +267,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Britania/Mesa/BVT410G/4.png',
                 '../src/assets/Ventiladores/Britania/Mesa/BVT410G/5.png',
 
-            ]
+            ], banner: "http://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
         },
         {
             id: 12,
@@ -286,7 +288,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Britania/Mesa/BVT405/2.png',
                 '../src/assets/Ventiladores/Britania/Mesa/BVT405/3.png',
                 '../src/assets/Ventiladores/Britania/Mesa/BVT405/4.png',
-            ]
+            ], banner: "http://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
         },
 
         // Britânia Coluna
@@ -309,7 +311,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Britania/Coluna/BVC450/2.jpg',
                 '../src/assets/Ventiladores/Britania/Coluna/BVC450/3.jpg',
                 '../src/assets/Ventiladores/Britania/Coluna/BVC450/4.jpg',
-            ]
+            ], banner: "http://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
         },
 
         {
@@ -331,7 +333,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Britania/Coluna/BVC680CM/3.jpg',
                 '../src/assets/Ventiladores/Britania/Coluna/BVC680CM/4.jpg',
                 '../src/assets/Ventiladores/Britania/Coluna/BVC680CM/5.jpg',
-            ]
+            ], banner: "http://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
         },
 
         {
@@ -353,7 +355,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Britania/Coluna/Turbo30/3.png',
                 '../src/assets/Ventiladores/Britania/Coluna/Turbo30/4.png',
                 '../src/assets/Ventiladores/Britania/Coluna/Turbo30/5.png',
-            ]
+            ], banner: "http://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
         },
 
         {
@@ -375,7 +377,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Britania/Coluna/BVC550P/3.jpg',
                 '../src/assets/Ventiladores/Britania/Coluna/BVC550P/4.jpg',
                 '../src/assets/Ventiladores/Britania/Coluna/BVC550P/5.jpg',
-            ]
+            ], banner: "http://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
         },
 
 
@@ -400,7 +402,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Mallory/Mesa/AirCareR/3.png',
                 '../src/assets/Ventiladores/Mallory/Mesa/AirCareR/4.png',
 
-            ]
+            ], banner: "https://mallorygroup.vteximg.com.br/arquivos/ids/158888/banner-site-mallory.png?v=637952322507330000"
         },
         {
             id: 18,
@@ -422,7 +424,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Mallory/Mesa/MaxControl/4.png',
                 '../src/assets/Ventiladores/Mallory/Mesa/MaxControl/5.png',
 
-            ]
+            ], banner: "https://mallorygroup.vteximg.com.br/arquivos/ids/158888/banner-site-mallory.png?v=637952322507330000"
         },
 
         {
@@ -445,7 +447,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Mallory/Mesa/Ozonic/4.png',
                 '../src/assets/Ventiladores/Mallory/Mesa/Ozonic/5.png',
 
-            ]
+            ], banner: "https://mallorygroup.vteximg.com.br/arquivos/ids/158888/banner-site-mallory.png?v=637952322507330000"
         },
         {
             id: 20,
@@ -467,7 +469,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Mallory/Mesa/NeoAirTS/4.png',
                 '../src/assets/Ventiladores/Mallory/Mesa/NeoAirTS/5.png',
 
-            ]
+            ], banner: "https://mallorygroup.vteximg.com.br/arquivos/ids/158888/banner-site-mallory.png?v=637952322507330000"
         },
 
 
@@ -493,7 +495,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Mallory/Coluna/NeoAirPlus/4.png',
                 '../src/assets/Ventiladores/Mallory/Coluna/NeoAirPlus/5.png',
 
-            ]
+            ], banner: "https://mallorygroup.vteximg.com.br/arquivos/ids/158888/banner-site-mallory.png?v=637952322507330000"
         }, {
             id: 22,
             helices: 6,
@@ -515,7 +517,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Mallory/Coluna/NeoAirPlusDourado/4.jpg',
                 '../src/assets/Ventiladores/Mallory/Coluna/NeoAirPlusDourado/5.jpg',
 
-            ]
+            ], banner: "https://mallorygroup.vteximg.com.br/arquivos/ids/158888/banner-site-mallory.png?v=637952322507330000"
         },
 
         {
@@ -539,7 +541,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Mallory/Coluna/NeoAirPlusAzul/4.jpg',
                 '../src/assets/Ventiladores/Mallory/Coluna/NeoAirPlusAzul/5.jpg',
 
-            ]
+            ], banner: "https://mallorygroup.vteximg.com.br/arquivos/ids/158888/banner-site-mallory.png?v=637952322507330000"
         },
 
         {
@@ -563,7 +565,7 @@ export const Ventiladores: FansProps[] =
                 '../src/assets/Ventiladores/Mallory/Coluna/AirTimerGrafite/4.jpg',
 
 
-            ]
+            ], banner: "https://mallorygroup.vteximg.com.br/arquivos/ids/158888/banner-site-mallory.png?v=637952322507330000"
         },
 
 
