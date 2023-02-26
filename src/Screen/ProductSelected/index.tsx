@@ -9,12 +9,14 @@ import { Description } from "./components/Description";
 
 
 
+
 export function ProductSelected() {
     const { id, brand } = useParams()
     const selectedProduct = Ventiladores.find((product) => product.id === Number(id));
     const [image, setImage] = useState(0)
 
-   
+
+
 
     return (
         <SelectedContainer>
@@ -28,17 +30,18 @@ export function ProductSelected() {
 
                     <Carossel className="teste">
 
-                        
-                            {selectedProduct?.imagens.map((imagens,index) => {
-                                return (
-                                    <div className="keen-slider__slide item">
-                                        <button onClick={() => setImage(index)}>
-                                            <img src={imagens} alt="" />
-                                        </button>
-                                    </div>
-                                )
-                            })}
-                    
+
+
+                        {selectedProduct?.imagens.map((imagens, index) => {
+                            return (
+                                <div className="item">
+                                    <button onClick={() => setImage(index)}>
+                                        <img src={imagens} alt="" />
+                                    </button>
+                                </div>
+                            )
+                        })}
+
                     </Carossel>
                 </Product>
                 <Info>
@@ -46,8 +49,8 @@ export function ProductSelected() {
                 </Info>
 
             </InfoProduct>
-            <Description product={selectedProduct}/>
-            
+            <Description product={selectedProduct} />
+
         </SelectedContainer>
     )
 }

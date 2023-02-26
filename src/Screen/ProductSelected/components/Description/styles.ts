@@ -25,7 +25,7 @@ export const DescriptionContainer = styled.section`
            
 
             :hover{
-                border-bottom: 5px solid #eb322f;
+                border-bottom: 5px solid ${theme => theme.theme.colors["purple-300"]};
                 transition: all 0.3s;
             }
         }
