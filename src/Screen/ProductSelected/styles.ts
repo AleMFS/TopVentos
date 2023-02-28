@@ -70,12 +70,16 @@ export const Carossel = styled.div`
     width: 100%;
     max-width: 100%;    
     display: flex;
+    gap: 0.5rem;
    
     
     .item{
+        
+        
         border: 1px solid gray;
+        
       
-       max-width: 1440px;
+      
        display: flex;
 
         button{
