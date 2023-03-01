@@ -36,13 +36,14 @@ export const InfoProduct = styled.section`
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    
     border-bottom: 1px solid black;
 
     
     
 `
 export const Product = styled.div`
-    width: 100%;
+    min-width: 100%;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -57,22 +58,18 @@ export const Product = styled.div`
 
 `
 export const Info = styled.div`
-    width: 100%;
+    min-width: 100%;
     padding: 1rem;
     div{
         width: 100%;
+        
         background: blue;
         
     }
 `
 
 export const Carossel = styled.div`
-    width: 100%;
-    max-width: 100%;    
-    display: flex;
-    gap: 0.5rem;
-   
-    
+      
     .item{
         
         
@@ -85,11 +82,11 @@ export const Carossel = styled.div`
         button{
             border: none;
             background: transparent;
-            width: 100%;
+           
             
         }
         img{
-            width: 100%;
+            
             
         }
 

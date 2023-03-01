@@ -6,6 +6,8 @@ import Britania from "../../assets/Logos/Britania.png"
 import Mallory from "../../assets/Logos/Mallory.png"
 import { useState } from "react";
 import { Description } from "./components/Description";
+import { useKeenSlider } from "keen-slider/react"
+import "keen-slider/keen-slider.min.css"
 
 
 
@@ -16,7 +18,12 @@ export function ProductSelected() {
     const [image, setImage] = useState(0)
 
 
-
+    const [ref] = useKeenSlider<HTMLDivElement>({
+        slides: {
+          perView: 3.5,
+          spacing: 15,
+        },
+      })
 
     return (
         <SelectedContainer>
@@ -28,13 +35,13 @@ export function ProductSelected() {
                 <Product>
                     <img src={selectedProduct?.imagens[image]} alt="" />
 
-                    <Carossel className="teste">
+                    <Carossel ref={ref} className="keen-slider" >
 
 
 
                         {selectedProduct?.imagens.map((imagens, index) => {
                             return (
-                                <div className="item">
+                                <div className="item keen-slider__slide" key={index}>
                                     <button onClick={() => setImage(index)}>
                                         <img src={imagens} alt="" />    
                                     </button>
