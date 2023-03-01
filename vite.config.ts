@@ -12,7 +12,7 @@ export default defineConfig({
             { 
               // copia os arquivos da pasta "src/assets/images" para a pasta "img" na pasta de saída
               src: 'src/assets/images/*',
-              dest: 'img',
+              dest: 'images',
             },
           ],
         }),

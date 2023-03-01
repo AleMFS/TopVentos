@@ -3,9 +3,10 @@ import { Ventiladores } from '../../../Ventiladores'
 import { BannerLogo, Carossel, Info, InfoProduct, Product, SelectedContainer } from "./styles";
 import Arno from "../../assets/images/Logos/Arno.png"
 import Britania from "../../assets/images/Logos/Britania.png"
-import Mallory from "../../assets/images/Logos/Mallory.png"
+
 import { MutableRefObject, useState } from "react";
 import { Description } from "./components/Description";
+import Mallory from '../../../images/Logos/Mallory.png'
 import {
     useKeenSlider,
     KeenSliderPlugin,
