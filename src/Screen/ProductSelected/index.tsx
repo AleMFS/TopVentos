@@ -88,7 +88,7 @@ export function ProductSelected() {
                             return (
 
                                 <div className="keen-slider__slide">
-                                    <img src={imagens} alt="" />
+                                    <img src={`${imagens}`} alt="" />
                                 </div>
 
                             )
