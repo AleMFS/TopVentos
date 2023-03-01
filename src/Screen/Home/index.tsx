@@ -1,7 +1,7 @@
 import { Fans } from "./components/Fans";
 import { FilterCheckbox } from "./components/FilterCheckbox";
 import { CarroselContainer, Checkbox, FilterArea, HomeCointainer, ProductContainer, Products, ProductsContent } from "./styles";
-import { Ventiladores } from '../../../Ventiladores'
+import { Ventiladores } from '../../data/Ventiladores'
 import { useRef, useState } from "react";
 import ReactPaginate from "react-paginate";
 import { CaretLeft, CaretRight } from "phosphor-react";

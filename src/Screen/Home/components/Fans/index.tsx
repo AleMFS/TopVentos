@@ -1,6 +1,6 @@
 import { priceFormmater } from "../../../../utils/formatter";
 import { Fan } from "./styles";
-import { FansProps } from "../../../../../Ventiladores";
+import { FansProps } from "../../../../data/Ventiladores";
 import { NavLink } from "react-router-dom";
 
 interface Props {

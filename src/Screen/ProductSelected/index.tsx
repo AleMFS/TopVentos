@@ -1,11 +1,12 @@
 import { useParams } from "react-router-dom"
-import { Ventiladores } from '../../../Ventiladores'
+import { Ventiladores } from '../../data/Ventiladores'
 import { BannerLogo, Carossel, Info, InfoProduct, Product, SelectedContainer } from "./styles";
 import Arno from "../../../public/images/Logos/Arno.png"
 import Britania from "../../../public/images/Logos/Britania.png"
 import Mallory from "../../../public/images/Logos/Mallory.png"
 import { MutableRefObject, useState } from "react";
 import { Description } from "./components/Description";
+
 
 import {
     useKeenSlider,

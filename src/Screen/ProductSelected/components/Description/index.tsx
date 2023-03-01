@@ -1,6 +1,6 @@
 
 import { useRef } from "react";
-import { FansProps } from "../../../../../Ventiladores";
+import { FansProps } from "../../../../data/Ventiladores";
 import { Characteristics, DescriptionContainer, DescriptionProducts } from "./styles";
 
 interface Props {
