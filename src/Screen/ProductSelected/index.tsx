@@ -57,6 +57,7 @@ function ThumbnailPlugin(
 
 
 export function ProductSelected() {
+    const isProduction = process.env.NODE_ENV === 'production';
     const { id, brand } = useParams()
     const selectedProduct = Ventiladores.find((product) => product.id === Number(id));
     const [image, setImage] = useState(0)
@@ -90,7 +91,7 @@ export function ProductSelected() {
                             return (
 
                                 <div className="keen-slider__slide">
-                                    <img src={`${imagens}`} alt="" />
+                                    <img src={isProduction ? imagens : `../../public${imagens}`} alt="" />
                                 </div>
 
                             )

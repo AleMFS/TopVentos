@@ -60,7 +60,7 @@ export const Ventiladores: FansProps[] =
             imagens: [
                 "/images/ventiladores/Arno/Mesa/VB40/0.jpg",
                 "/images/ventiladores/Arno/Mesa/VB40/1.jpg",
-                "/images/ventiladores/Arno/Mesa/VB40/2.jpg",
+                "g/images/ventiladores/Arno/Mesa/VB40/2.jpg",
                 "/images/ventiladores/Arno/Mesa/VB40/3.jpg",
                 "/images/ventiladores/Arno/Mesa/VB40/4.jpg",
                 "/images/ventiladores/Arno/Mesa/VB40/5.jpg"
