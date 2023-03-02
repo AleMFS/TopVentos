@@ -9,10 +9,11 @@ interface Props {
 }
 
 export function Fans({ fan }: Props) {
+    console.log(fan.imagens[0])
     return (
         <Fan>
-
-            <img src={teste} alt="" />
+            
+            <img src={fan.imagens[0]} alt="" />
             <h3>{fan.title}</h3>
             <span></span>
             <p>{priceFormmater.format(fan.valor)}</p>
