@@ -58,12 +58,13 @@ export const Product = styled.div`
 
 `
 export const Info = styled.div`
+    display: flex;
     min-width: 100%;
     padding: 1rem;
     div{
         width: 100%;
         
-        background: blue;
+        
         
     }
 `

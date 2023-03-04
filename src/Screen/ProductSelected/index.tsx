@@ -17,6 +17,7 @@ import {
 } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import ScrollToTop from "./components/ScrollTop";
+import { Informations } from "./components/Informations";
 
 
 
@@ -115,7 +116,7 @@ export function ProductSelected() {
                     </Carossel>
                 </Product>
                 <Info>
-                    <div>Info</div>
+                        <Informations product={selectedProduct}/>
                 </Info>
 
             </InfoProduct>

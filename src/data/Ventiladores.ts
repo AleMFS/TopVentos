@@ -123,7 +123,7 @@ export const Ventiladores: FansProps[] =
             marca: "Arno",
             tipo: "Mesa",
             cor: "Preto",
-            descricao: "eixe os ambientes da sua casa muito mais agradáveis, refrescantes, silenciosos e protegidos contra mosquitos com o novo Ventilador de Mesa desmontável da Arno! 4x Mais silencioso e ainda mais forte que os demais disponíveis no mercado Design sofisticado Totalmente desmontável, possibilitando fácil armazenamento Power Zone: uma área concentrada que garante o máximo de vento direcionado, oferecendo performance superior Função Eco Fresh que economiza até 20% de energia ajudando na redução do consumo e nos gastos com a conta de luz. Garantia da marca número 1 e especialista há mais de 60 anos em ventilação",
+            descricao: "Deixe os ambientes da sua casa muito mais agradáveis, refrescantes, silenciosos e protegidos contra mosquitos com o novo Ventilador de Mesa desmontável da Arno! 4x Mais silencioso e ainda mais forte que os demais disponíveis no mercado Design sofisticado Totalmente desmontável, possibilitando fácil armazenamento Power Zone: uma área concentrada que garante o máximo de vento direcionado, oferecendo performance superior Função Eco Fresh que economiza até 20% de energia ajudando na redução do consumo e nos gastos com a conta de luz. Garantia da marca número 1 e especialista há mais de 60 anos em ventilação",
             imagens: [
                 "/images/ventiladores/Arno/Mesa/VB55/0.jpg",
                 "/images/ventiladores/Arno/Mesa/VB55/1.jpg",
@@ -223,7 +223,7 @@ export const Ventiladores: FansProps[] =
                 "/images/ventiladores/Britania/Mesa/Protect/3.png",
                 "/images/ventiladores/Britania/Mesa/Protect/4.png",
 
-            ], banner: "http://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
+            ], banner: "https://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
         },
 
         {
@@ -246,7 +246,7 @@ export const Ventiladores: FansProps[] =
                 "/images/ventiladores/Britania/Mesa/BVT495PA/3.png",
                 "/images/ventiladores/Britania/Mesa/BVT495PA/4.png",
 
-            ], banner: "http://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
+            ], banner: "https://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
         },
         {
             id: 11,
@@ -269,7 +269,7 @@ export const Ventiladores: FansProps[] =
                 "/images/ventiladores/Britania/Mesa/BVT410G/4.png",
                 "/images/ventiladores/Britania/Mesa/BVT410G/5.png",
 
-            ], banner: "http://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
+            ], banner: "https://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
         },
         {
             id: 12,
@@ -290,7 +290,7 @@ export const Ventiladores: FansProps[] =
                 "/images/ventiladores/Britania/Mesa/BVT405/2.png",
                 "/images/ventiladores/Britania/Mesa/BVT405/3.png",
                 "/images/ventiladores/Britania/Mesa/BVT405/4.png",
-            ], banner: "http://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
+            ], banner: "https://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
         },
 
         // Britânia Coluna
@@ -313,7 +313,7 @@ export const Ventiladores: FansProps[] =
                 "/images/ventiladores/Britania/Coluna/BVC450/2.jpg",
                 "/images/ventiladores/Britania/Coluna/BVC450/3.jpg",
                 "/images/ventiladores/Britania/Coluna/BVC450/4.jpg",
-            ], banner: "http://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
+            ], banner: "https://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
         },
 
         {
@@ -335,7 +335,7 @@ export const Ventiladores: FansProps[] =
                 "/images/ventiladores/Britania/Coluna/BVC680CM/3.jpg",
                 "/images/ventiladores/Britania/Coluna/BVC680CM/4.jpg",
                 "/images/ventiladores/Britania/Coluna/BVC680CM/5.jpg",
-            ], banner: "http://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
+            ], banner: "https://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
         },
 
         {
@@ -357,7 +357,7 @@ export const Ventiladores: FansProps[] =
                 "/images/ventiladores/Britania/Coluna/Turbo30/3.png",
                 "/images/ventiladores/Britania/Coluna/Turbo30/4.png",
                 "/images/ventiladores/Britania/Coluna/Turbo30/5.png",
-            ], banner: "http://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
+            ], banner: "https://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
         },
 
         {
@@ -379,7 +379,7 @@ export const Ventiladores: FansProps[] =
                 "/images/ventiladores/Britania/Coluna/BVC550P/3.jpg",
                 "/images/ventiladores/Britania/Coluna/BVC550P/4.jpg",
                 "/images/ventiladores/Britania/Coluna/BVC550P/5.jpg",
-            ], banner: "http://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
+            ], banner: "https://philco.vteximg.com.br/arquivos/Topo%20Pg_nova%20medida.jpg"
         },
 
 

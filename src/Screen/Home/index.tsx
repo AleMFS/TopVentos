@@ -2,26 +2,71 @@ import { Fans } from "./components/Fans";
 import { FilterCheckbox } from "./components/FilterCheckbox";
 import { CarroselContainer, Checkbox, FilterArea, HomeCointainer, ProductContainer, Products, ProductsContent } from "./styles";
 import { Ventiladores } from '../../data/Ventiladores'
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ReactPaginate from "react-paginate";
 import { CaretLeft, CaretRight } from "phosphor-react";
 
-interface CheckboxProps {
-    coluna: boolean
-    mesa: boolean
-    tamanho: string[]
+
+
+export interface FansProps {
+    id: number
+    helices: number
+    potencia: number
+    tamanho: number
+    valor: number
+    modelo: string
+    title: string
+    marca: string
+    tipo: "Mesa" | "Coluna"
+    cor: string
+    descricao: string
+    imagens: string[]
+    banner?: string
 }
-
-
 export function Home() {
-    const [checkboxValues, setCheckboxValues] = useState<CheckboxProps>({
-        coluna: false,
-        mesa: false,
-        tamanho: []
-    })
+    const [shuffledItems,SetshuffledItems] = useState<FansProps[]>([])
+    const [category, setCategory] = useState<String[]>([])
+
+    const handleTypeFilter = (type: string) => {
+        setTimeout(() => {
+            const index = category.indexOf(type);
+        if (index === -1) {
+          // adiciona o tipo selecionado ao array de category
+          setCategory([...category, type]);
+        } else {
+          // remove o tipo selecionado do array de category
+          const newGeneros = [...category];
+          newGeneros.splice(index, 1);
+          setCategory(newGeneros);
+          setCurrentPage(1)
+        }
+        }, 500);
+        
+      };
+    
+      const fanFilter = shuffledItems.filter((product) => {
+        if (category.length === 0) {
+          // se nenhum tipo estiver selecionado, exibe todos os ventiladores
+          return true;
+        } else {
+          // verifica se o tipo do ventilador está entre os tipos selecionados
+          return category.includes(product.tipo);
+        }
+      });
+
+    
+      
+    function embaralhar(){
+        SetshuffledItems(Ventiladores.sort(() => Math.random() - 0.5))
+    }
+
+    useEffect(()=>{
+
+        embaralhar()
+
+    },[])
 
     const [currentPage, setCurrentPage] = useState(1)
-    const shuffledItems = Ventiladores.sort(() => Math.random() - 0.5);
     const moveUp = useRef<HTMLDivElement>(null);
 
     const moveDescription = () => {
@@ -37,13 +82,13 @@ export function Home() {
         const currentPage = data.selected + 1;
         setCurrentPage(currentPage)
         moveDescription()
-        
+
     }
 
     const itemPerPage = 9
     const start = itemPerPage * (currentPage - 1)
     const end = start + itemPerPage
-    const transactionsPerPage = shuffledItems.slice(start, end)
+    const transactionsPerPage = fanFilter.slice(start, end)
 
 
     return (
@@ -67,7 +112,7 @@ export function Home() {
                             </div>
 
                         </FilterArea>
-                        <FilterCheckbox />
+                        <FilterCheckbox filtro={handleTypeFilter} opcoes={category}/>
                     </Checkbox>
 
                     <div >
@@ -80,25 +125,25 @@ export function Home() {
                             ))}
 
                         </Products>
-                        {Ventiladores.length > itemPerPage ?
-                        < ReactPaginate
-                        //styles
-                        className="container"
-                        pageLinkClassName='containerNumber'
-                        disabledClassName="arrowDisabled"
-                        activeClassName="currentNumberPage"
-                        previousClassName='arrowSelected'
-                        nextClassName='arrowSelected'
+                        {fanFilter.length > itemPerPage ?
+                            < ReactPaginate
+                                //styles
+                                className="container"
+                                pageLinkClassName='containerNumber'
+                                disabledClassName="arrowDisabled"
+                                activeClassName="currentNumberPage"
+                                previousClassName='arrowSelected'
+                                nextClassName='arrowSelected'
 
-                        breakLabel="..."
-                        nextLabel={<CaretRight size={24} weight='bold' />}
-                        onPageChange={handlePageClick}
-                        pageRangeDisplayed={5}
-                        pageCount={Math.ceil(Ventiladores.length / itemPerPage)}
-                        previousLabel={<CaretLeft size={24} weight='bold' />}
-                    />
-                    :
-                    ''}
+                                breakLabel="..."
+                                nextLabel={<CaretRight size={24} weight='bold' />}
+                                onPageChange={handlePageClick}
+                                pageRangeDisplayed={5}
+                                pageCount={Math.ceil(fanFilter.length / itemPerPage)}
+                                previousLabel={<CaretLeft size={24} weight='bold' />}
+                            />
+                            :
+                            ''}
                     </div>
 
                 </ProductsContent>

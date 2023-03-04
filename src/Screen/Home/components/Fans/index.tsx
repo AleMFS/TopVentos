@@ -9,7 +9,7 @@ interface Props {
 }
 
 export function Fans({ fan }: Props) {
-    console.log(fan.imagens[0])
+    
     return (
         <Fan>
             
