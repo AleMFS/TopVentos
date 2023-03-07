@@ -3,7 +3,7 @@ export interface FansProps {
     id: number
     helices: number
     potencia: number
-    tamanho: number
+    tamanho: string
     valor: number
     modelo: string
     title: string
@@ -24,7 +24,7 @@ export const Ventiladores: FansProps[] =
             id: 0,
             helices: 6,
             potencia: 127,
-            tamanho: 40,
+            tamanho: "40",
             valor: 249.99,
 
             title: "Ventilador de Mesa XForce 40cm Cinza com 3 Velocidades VEPX",
@@ -48,7 +48,7 @@ export const Ventiladores: FansProps[] =
             id: 1,
             helices: 6,
             potencia: 126,
-            tamanho: 40,
+            tamanho: "40",
             modelo: "VB40",
             valor: 289.99,
 
@@ -71,7 +71,7 @@ export const Ventiladores: FansProps[] =
             id: 2,
             helices: 6,
             potencia: 126,
-            tamanho: 50,
+            tamanho: "50",
             modelo: "VB50",
             valor: 349.99,
 
@@ -93,7 +93,7 @@ export const Ventiladores: FansProps[] =
             id: 3,
             helices: 6,
             potencia: 126,
-            tamanho: 40,
+            tamanho: "40",
             modelo: "VDBT",
             valor: 369.99,
 
@@ -115,7 +115,7 @@ export const Ventiladores: FansProps[] =
             id: 4,
             helices: 6,
             potencia: 126,
-            tamanho: 40,
+            tamanho: "40",
             modelo: "VB55",
             valor: 349.99,
 
@@ -140,7 +140,7 @@ export const Ventiladores: FansProps[] =
             id: 5,
             helices: 6,
             potencia: 126,
-            tamanho: 50,
+            tamanho: "50",
             modelo: "VB52",
             valor: 479.99,
 
@@ -162,7 +162,7 @@ export const Ventiladores: FansProps[] =
             id: 6,
             helices: 6,
             potencia: 126,
-            tamanho: 40,
+            tamanho: "40",
             modelo: "VFC4",
             valor: 319.99,
 
@@ -184,7 +184,7 @@ export const Ventiladores: FansProps[] =
             id: 8,
             helices: 6,
             potencia: 126,
-            tamanho: 40,
+            tamanho: "40",
             valor: 399.99,
             modelo: "VD5C",
             title: "Ventilador de Coluna Arno Ultra Silence Force Desmontável Repelente 40cm VD5C",
@@ -208,7 +208,7 @@ export const Ventiladores: FansProps[] =
             id: 9,
             helices: 6,
             potencia: 60,
-            tamanho: 30,
+            tamanho: "30",
             valor: 129.99,
             modelo: "Protect-30-Six",
             title: "Ventilador Britânia Protect 30 Six 60W",
@@ -230,7 +230,7 @@ export const Ventiladores: FansProps[] =
             id: 10,
             helices: 10,
             potencia: 165,
-            tamanho: 47,
+            tamanho: '47',
 
             valor: 229.99,
             modelo: "BVT495PA",
@@ -252,7 +252,7 @@ export const Ventiladores: FansProps[] =
             id: 11,
             helices: 6,
             potencia: 160,
-            tamanho: 47,
+            tamanho: '47',
 
             valor: 249.99,
             modelo: "BVT410G",
@@ -275,7 +275,7 @@ export const Ventiladores: FansProps[] =
             id: 12,
             helices: 6,
             potencia: 160,
-            tamanho: 40,
+            tamanho: "40",
 
             valor: 189.99,
             modelo: " BVT405",
@@ -299,7 +299,7 @@ export const Ventiladores: FansProps[] =
             id: 13,
             helices: 6,
             potencia: 160,
-            tamanho: 40,
+            tamanho: "40",
             valor: 279.99,
             modelo: "BVC450",
             title: "Ventilador Britânia Coluna Turbo BVC450 160W",
@@ -320,7 +320,7 @@ export const Ventiladores: FansProps[] =
             id: 14,
             helices: 8,
             potencia: 205,
-            tamanho: 50,
+            tamanho: "50",
             valor: 349.90,
             modelo: "BVC680CM",
             title: "Ventilador Vertical Britânia BVC680CM Coluna Telescópica 8 Pás",
@@ -342,7 +342,7 @@ export const Ventiladores: FansProps[] =
             id: 15,
             helices: 6,
             potencia: 75,
-            tamanho: 30,
+            tamanho: "30",
             valor: 199.99,
             modelo: "Turbo-30",
             title: "Ventilador de Coluna Britânia Mega  Six 75W",
@@ -364,7 +364,7 @@ export const Ventiladores: FansProps[] =
             id: 16,
             helices: 6,
             potencia: 160,
-            tamanho: 45,
+            tamanho: '45',
             valor: 359.99,
             modelo: "BVC550P",
             title: "Ventilador de Coluna Britânia BVC550P Maxx Force Turbo",
@@ -389,7 +389,7 @@ export const Ventiladores: FansProps[] =
             id: 17,
             helices: 15,
             potencia: 140,
-            tamanho: 40,
+            tamanho: "40",
             valor: 200.20,
             modelo: "BVT405",
             title: "Ventilador Britânia Super Turbo BVT405",
@@ -410,7 +410,7 @@ export const Ventiladores: FansProps[] =
             id: 18,
             helices: 15,
             potencia: 140,
-            tamanho: 40,
+            tamanho: "40",
             valor: 324.89,
             modelo: "MaxControl",
             title: "Ventilador Mallory Max Control Preto Laranja com Controle 40 cm",
@@ -433,7 +433,7 @@ export const Ventiladores: FansProps[] =
             id: 19,
             helices: 6,
             potencia: 140,
-            tamanho: 40,
+            tamanho: "40",
             valor: 227.99,
             modelo: "Ozonic",
             title: "Ventilador Mallory Ozonic TS 40 cm",
@@ -455,7 +455,7 @@ export const Ventiladores: FansProps[] =
             id: 20,
             helices: 15,
             potencia: 140,
-            tamanho: 40,
+            tamanho: "40",
             valor: 275.49,
             modelo: "Neo-Air-TS",
             title: "Ventilador Mallory Neo Air TS Dourado 40 cm",
@@ -481,7 +481,7 @@ export const Ventiladores: FansProps[] =
             id: 21,
             helices: 15,
             potencia: 140,
-            tamanho: 40,
+            tamanho: "40",
             valor: 399.99,
             modelo: "NeoAirPlus",
             title: "Ventilador Mallory Neo Air Plus Grafite com Controle 40 cm",
@@ -502,7 +502,7 @@ export const Ventiladores: FansProps[] =
             id: 22,
             helices: 6,
             potencia: 126,
-            tamanho: 40,
+            tamanho: "40",
             valor: 341.99,
             modelo: "NeoAirPlusDourado",
 
@@ -526,7 +526,7 @@ export const Ventiladores: FansProps[] =
             id: 23,
             helices: 15,
             potencia: 140,
-            tamanho: 40,
+            tamanho: "40",
             valor: 299.99,
             modelo: "NeoAirPlusAzul",
 
@@ -550,7 +550,7 @@ export const Ventiladores: FansProps[] =
             id: 24,
             helices: 6,
             potencia: 126,
-            tamanho: 40,
+            tamanho: "40",
             valor: 341.99,
             modelo: "AirTimerGrafite",
 

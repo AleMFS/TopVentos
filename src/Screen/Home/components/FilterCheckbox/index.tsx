@@ -2,15 +2,21 @@
 import { Category, Size } from "./styles";
 
 interface props {
-    filtro: (tipo:string) => void
+    filtroType: (tipo:string) => void
+    filtroSize: (tipo:string) => void
     opcoes:String[]
 }
 
-export function FilterCheckbox({ filtro,opcoes }: props) {
+export function FilterCheckbox({ filtroType,filtroSize,opcoes }: props) {
 
-    function teste(tipo:string) {
-        filtro(tipo)
+    function handleType(tipo:string) {
+        filtroType(tipo)
     }
+
+    function handleSize (size:string) {
+        filtroSize(size)
+    }
+
     return (
         <>
             <Category>
@@ -20,7 +26,7 @@ export function FilterCheckbox({ filtro,opcoes }: props) {
                         type="checkbox"
                         name="mesa"
                         //checked={} 
-                        onChange={() => teste("Mesa")}
+                        onChange={() => handleType("Mesa")}
                         id="" />
 
                     Ventiladores de Mesa
@@ -30,7 +36,7 @@ export function FilterCheckbox({ filtro,opcoes }: props) {
                         type="checkbox"
                         name="coluna"
                         //checked={} 
-                        onChange={() => teste("Coluna")}
+                        onChange={() => handleType("Coluna")}
                         id="" />
                     Ventiladores de Coluna
                 </label>
@@ -42,6 +48,7 @@ export function FilterCheckbox({ filtro,opcoes }: props) {
                     <input
                         type="checkbox"
                         name="30"
+                        onChange={() => handleSize('30')}
                     />
                     30CM
                 </label>
@@ -49,6 +56,7 @@ export function FilterCheckbox({ filtro,opcoes }: props) {
                     <input
                         type="checkbox"
                         name="40"
+                        onChange={() => handleSize('40')}
                         id="" />
                     40CM
                 </label>
@@ -56,6 +64,7 @@ export function FilterCheckbox({ filtro,opcoes }: props) {
                     <input
                         type="checkbox"
                         name="50"
+                        onChange={() => handleSize('50')}
                         id="" />
                     50CM
                 </label>

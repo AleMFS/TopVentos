@@ -12,7 +12,7 @@ export interface FansProps {
     id: number
     helices: number
     potencia: number
-    tamanho: number
+    tamanho: string
     valor: number
     modelo: string
     title: string
@@ -24,47 +24,68 @@ export interface FansProps {
     banner?: string
 }
 export function Home() {
-    const [shuffledItems,SetshuffledItems] = useState<FansProps[]>([])
-    const [category, setCategory] = useState<String[]>([])
+    const [shuffledItems, SetshuffledItems] = useState<FansProps[]>([])
+    const [typeFan, setTypeFan] = useState<String[]>([])
+    const [sizeFan, setSizeFan] = useState<string[]>([])
 
     const handleTypeFilter = (type: string) => {
         setTimeout(() => {
-            const index = category.indexOf(type);
-        if (index === -1) {
-          // adiciona o tipo selecionado ao array de category
-          setCategory([...category, type]);
-        } else {
-          // remove o tipo selecionado do array de category
-          const newGeneros = [...category];
-          newGeneros.splice(index, 1);
-          setCategory(newGeneros);
-          setCurrentPage(1)
-        }
+            const index = typeFan.indexOf(type);
+            if (index === -1) {
+                // adiciona o tipo selecionado ao array de category
+                setTypeFan([...typeFan, type]);
+            } else {
+                // remove o tipo selecionado do array de category
+                const newGeneros = [...typeFan];
+                newGeneros.splice(index, 1);
+                setTypeFan(newGeneros);
+                setCurrentPage(1)
+            }
         }, 500);
-        
-      };
-    
-      const fanFilter = shuffledItems.filter((product) => {
-        if (category.length === 0) {
-          // se nenhum tipo estiver selecionado, exibe todos os ventiladores
+
+    };
+    const handleSizeFilter = (size: string) => {
+        setTimeout(() => {
+            const index = sizeFan.indexOf(size);
+            if (index === -1) {
+                // adiciona o tipo selecionado ao array de category
+                setSizeFan([...sizeFan, size]);
+            } else {
+                // remove o tipo selecionado do array de category
+                const newGeneros = [...sizeFan];
+                newGeneros.splice(index, 1);
+                setSizeFan(newGeneros);
+                setCurrentPage(1)
+            }
+        }, 500);
+    }
+
+    const fanFilter = shuffledItems.filter((product) => {
+        if (typeFan.length === 0 && sizeFan.length === 0) {
+          // se nenhum tipo ou tamanho estiver selecionado, exibe todos os ventiladores
           return true;
-        } else {
+        } else if (typeFan.length > 0 && sizeFan.length === 0) {
           // verifica se o tipo do ventilador está entre os tipos selecionados
-          return category.includes(product.tipo);
+          return typeFan.includes(product.tipo);
+        } else if (typeFan.length === 0 && sizeFan.length > 0) {
+          // verifica se o tamanho do ventilador está entre os tamanhos selecionados
+          return sizeFan.includes(product.tamanho);
+        } else {
+          // verifica se o tipo e o tamanho do ventilador estão entre os selecionados
+          return typeFan.includes(product.tipo) && sizeFan.includes(product.tamanho);
         }
       });
 
-    
-      
-    function embaralhar(){
+
+    function embaralhar() {
         SetshuffledItems(Ventiladores.sort(() => Math.random() - 0.5))
     }
 
-    useEffect(()=>{
+    useEffect(() => {
 
         embaralhar()
 
-    },[])
+    }, [])
 
     const [currentPage, setCurrentPage] = useState(1)
     const moveUp = useRef<HTMLDivElement>(null);
@@ -112,12 +133,12 @@ export function Home() {
                             </div>
 
                         </FilterArea>
-                        <FilterCheckbox filtro={handleTypeFilter} opcoes={category}/>
+                        <FilterCheckbox filtroType={handleTypeFilter} filtroSize={handleSizeFilter} opcoes={typeFan} />
                     </Checkbox>
 
                     <div >
                         <div style={{ padding: '1rem' }}>
-                            <strong> {Ventiladores.length} produtos encontrados</strong>
+                            <strong> {fanFilter.length} produtos encontrados</strong>
                         </div>
                         <Products ref={moveUp}>
                             {transactionsPerPage.map(fan => (
