@@ -1,24 +1,24 @@
 
-import { Category, Size } from "./styles";
+import { Category, FilterCheckBoxContainer, Size } from "./styles";
 
 interface props {
-    filtroType: (tipo:string) => void
-    filtroSize: (tipo:string) => void
-    opcoes:String[]
+    filtroType: (tipo: string) => void
+    filtroSize: (tipo: string) => void
+    opcoes: String[]
 }
 
-export function FilterCheckbox({ filtroType,filtroSize,opcoes }: props) {
+export function FilterCheckbox({ filtroType, filtroSize, opcoes }: props) {
 
-    function handleType(tipo:string) {
+    function handleType(tipo: string) {
         filtroType(tipo)
     }
 
-    function handleSize (size:string) {
+    function handleSize(size: string) {
         filtroSize(size)
     }
 
     return (
-        <>
+        <FilterCheckBoxContainer>
             <Category>
                 <p>Categorias</p>
                 <label>
@@ -29,7 +29,7 @@ export function FilterCheckbox({ filtroType,filtroSize,opcoes }: props) {
                         onChange={() => handleType("Mesa")}
                         id="" />
 
-                    Ventiladores de Mesa
+                    Mesa
                 </label>
                 <label>
                     <input
@@ -38,7 +38,7 @@ export function FilterCheckbox({ filtroType,filtroSize,opcoes }: props) {
                         //checked={} 
                         onChange={() => handleType("Coluna")}
                         id="" />
-                    Ventiladores de Coluna
+                    Coluna
                 </label>
                 <span></span>
             </Category>
@@ -69,6 +69,6 @@ export function FilterCheckbox({ filtroType,filtroSize,opcoes }: props) {
                     50CM
                 </label>
             </Size>
-        </>
+        </FilterCheckBoxContainer>
     )
 }

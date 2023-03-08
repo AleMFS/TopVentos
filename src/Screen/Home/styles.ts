@@ -93,6 +93,10 @@ export const ProductsContent = styled.div`
            
         }
     }
+    .filter {
+        padding: 1rem;
+        
+    }
 
         .currentNumberPage{
             color: #FFF;
@@ -121,9 +125,68 @@ export const ProductsContent = styled.div`
             background: transparent !important ;
         } 
 
+        @media (max-width:1024px){
+            display: grid;
+            grid-template-columns: 1fr;
+            
+
+            .filter{
+                display: flex;
+                justify-content: space-between;   
+                        
+            }
+          
+        }
 `
 export const Checkbox = styled.section`
     min-width: 13.125rem;
+
+    @media (max-width:1024px){
+        position: absolute;
+    top: 30px;
+    box-shadow: 0 1px 8px #00000024;
+    //background: transparent;
+   
+ 
+       
+    &.open{
+        opacity: 1;
+        visibility: visible;
+        
+        transform: translateY(0);
+        transition: opacity .4s ease, transform 0.4s ease, visibility .4s;
+    }
+  
+    &.closed{
+        
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(20px);
+        transition: opacity .4s ease, transform 0.4s ease, visibility .4s;
+    }
+
+    }
+`
+
+export const ContainerFilter = styled.div`
+    position: relative;
+
+    button{
+        border: 0;
+        background: transparent;
+
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+
+        margin-right: 1rem;
+        svg:first-child{
+            transform: rotate(90deg);
+        }
+    }
+
 `
 
 export const Products = styled.main`
