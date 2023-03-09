@@ -25,7 +25,7 @@ export interface FansProps {
     banner?: string
 }
 export function Home() {
-    const aleatorio = Ventiladores.sort(() => Math.random() - 0.5)
+    const [shuffledItems, SetshuffledItems] = useState<FansProps[]>([])
     const [typeFan, setTypeFan] = useState<String[]>([])
     const [sizeFan, setSizeFan] = useState<string[]>([])
 
@@ -46,6 +46,16 @@ export function Home() {
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
+
+    function embaralhar() {
+        SetshuffledItems(Ventiladores.sort(() => Math.random() - 0.5))
+    }
+
+    useEffect(() => {
+
+        embaralhar()
+
+    }, [])
 
     function openOrClose() {
         setIsOpen(!isOpen)
@@ -83,7 +93,7 @@ export function Home() {
         }, 500);
     }
 
-    const fanFilter = aleatorio.filter((product) => {
+    const fanFilter = shuffledItems.filter((product) => {
         if (typeFan.length === 0 && sizeFan.length === 0) {
             // se nenhum tipo ou tamanho estiver selecionado, exibe todos os ventiladores
             return true;
