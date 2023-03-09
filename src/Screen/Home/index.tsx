@@ -1,10 +1,11 @@
 import { Fans } from "./components/Fans";
 import { FilterCheckbox } from "./components/FilterCheckbox";
-import { CarroselContainer, Checkbox, ContainerFilter, FilterArea, HomeCointainer, ProductContainer, Products, ProductsContent } from "./styles";
+import { BannerPage, CarroselContainer, Checkbox, ContainerFilter, FilterArea, HomeCointainer, ProductContainer, Products, ProductsContent } from "./styles";
 import { Ventiladores } from '../../data/Ventiladores'
 import { useEffect, useRef, useState } from "react";
 import ReactPaginate from "react-paginate";
 import { CaretDown, CaretLeft, CaretRight, Faders } from "phosphor-react";
+import Banner from '../../../public/images/BannerT1.png'
 
 
 
@@ -24,11 +25,11 @@ export interface FansProps {
     banner?: string
 }
 export function Home() {
-    const [shuffledItems, SetshuffledItems] = useState<FansProps[]>([])
+    const aleatorio = Ventiladores.sort(() => Math.random() - 0.5)
     const [typeFan, setTypeFan] = useState<String[]>([])
     const [sizeFan, setSizeFan] = useState<string[]>([])
 
-    const [isOpen, setIsOpen] = useState(false)   
+    const [isOpen, setIsOpen] = useState(false)
 
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
@@ -46,9 +47,9 @@ export function Home() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    function openOrClose (){
+    function openOrClose() {
         setIsOpen(!isOpen)
-      }
+    }
 
     const handleTypeFilter = (type: string) => {
 
@@ -82,7 +83,7 @@ export function Home() {
         }, 500);
     }
 
-    const fanFilter = shuffledItems.filter((product) => {
+    const fanFilter = aleatorio.filter((product) => {
         if (typeFan.length === 0 && sizeFan.length === 0) {
             // se nenhum tipo ou tamanho estiver selecionado, exibe todos os ventiladores
             return true;
@@ -98,16 +99,6 @@ export function Home() {
         }
     });
 
-
-    function embaralhar() {
-        SetshuffledItems(Ventiladores.sort(() => Math.random() - 0.5))
-    }
-
-    useEffect(() => {
-
-        embaralhar()
-
-    }, [])
 
     const [currentPage, setCurrentPage] = useState(1)
     const moveUp = useRef<HTMLDivElement>(null);
@@ -133,9 +124,12 @@ export function Home() {
     const end = start + itemPerPage
     const transactionsPerPage = fanFilter.slice(start, end)
 
-    console.log(isOpen)
+
     return (
         <HomeCointainer>
+            <BannerPage>
+                <img src={Banner} alt="" />
+            </BannerPage>
             <div className="area-carrosel">
                 <CarroselContainer>
                     <p>marca1</p>
@@ -205,11 +199,11 @@ export function Home() {
                                             Filtrar
                                             <CaretDown size={15} color="#0d0d0d" />
                                         </button>
-                                        
+
                                         <Checkbox className={isOpen ? 'open' : 'closed'}>
                                             <FilterCheckbox filtroType={handleTypeFilter} filtroSize={handleSizeFilter} opcoes={typeFan} />
                                         </Checkbox>
-                                        
+
                                     </ContainerFilter>
 
                                 </div>

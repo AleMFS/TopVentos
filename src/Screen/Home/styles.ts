@@ -2,8 +2,20 @@ import styled from "styled-components";
 
 export const HomeCointainer = styled.section`
     width: 100%;
-    padding: 0 1rem;
+    
+    
 `
+export const BannerPage =styled.div`
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content:center ;
+
+    img{
+        width: 100%;
+    }
+`
+
 export const HomeContent = styled.div`
     width: 100%;
     max-width: 90rem;
@@ -49,6 +61,7 @@ export const FilterArea = styled.section`
 export const ProductContainer = styled.section`
     width: 100%;
     background: #fbfbfb;
+    padding: 0 1rem;
 
 `
 export const ProductsContent = styled.div`
