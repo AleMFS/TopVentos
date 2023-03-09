@@ -139,14 +139,15 @@ export const ProductsContent = styled.div`
         }
 `
 export const Checkbox = styled.section`
-    min-width: 13.125rem;
+        min-width: 13.125rem;
 
     @media (max-width:1024px){
         position: absolute;
-    top: 30px;
-    box-shadow: 0 1px 8px #00000024;
-    //background: transparent;
-   
+        top: 30px;
+        box-shadow: 0 1px 8px #000;
+        min-width: 0;
+        
+
  
        
     &.open{
@@ -196,7 +197,9 @@ export const Products = styled.main`
     gap: 2rem;
     padding-top: 2rem;
     
-  
+  @media(max-width:640px){
+    grid-template-columns: repeat(2,1fr);
+  }
     
    
 `

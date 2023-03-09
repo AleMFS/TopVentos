@@ -6,6 +6,7 @@ background: #FFF;
 
 @media( max-width:1024px){
     width: 7.5rem;
+    
     box-shadow: 1px 1px 8px #00000024;
 }
 `

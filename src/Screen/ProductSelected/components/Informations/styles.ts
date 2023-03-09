@@ -32,4 +32,10 @@ export const InformationContainer = styled.div`
         text-decoration: none;
         width: 40%;
     }
+
+    @media(max-width:768px){
+        a{
+            margin-top: 1rem;
+        }
+    }
 `

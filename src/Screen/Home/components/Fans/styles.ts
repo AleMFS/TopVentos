@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Fan = styled.div`
         display: flex;        
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         
         //max-width: 16.875rem;
         background: #FFF;
@@ -37,6 +37,7 @@ export const Fan = styled.div`
             button{
                 width: 100%;
             padding: 1rem;
+            border: none;
             background: #114074 ;
             color: #FFF;
             font-weight: bold;
