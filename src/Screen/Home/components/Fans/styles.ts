@@ -49,5 +49,8 @@ export const Fan = styled.div`
         }
         }
 
+        :hover{
+            box-shadow: 1px 3px 3px #000;
+        }
        
 `

@@ -10,6 +10,7 @@ export const BannerPage =styled.div`
     max-width: 1440px;
     display: flex;
     justify-content:center ;
+    margin: 0 auto;
 
     img{
         width: 100%;
@@ -194,10 +195,14 @@ export const ContainerFilter = styled.div`
         align-items: center;
         gap: 0.5rem;
         cursor: pointer;
+        color: ${color => color.theme.colors["purple-300"]};
+
 
         margin-right: 1rem;
         svg:first-child{
             transform: rotate(90deg);
+            color: ${color => color.theme.colors["purple-300"]};
+
         }
     }
 

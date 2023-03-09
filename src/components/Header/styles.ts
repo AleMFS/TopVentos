@@ -4,6 +4,7 @@ export const HeaderContainer = styled.header`
     width: 100%;
     max-width: 90rem;
     padding: 1rem;
+    margin: 0 auto;
     
 
     img{
