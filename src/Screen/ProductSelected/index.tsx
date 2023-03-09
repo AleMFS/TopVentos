@@ -72,7 +72,7 @@ export function ProductSelected() {
             initial: 0,
             slides: {
                 perView: 3.5,
-                spacing: 15,
+                spacing: 10,
             },
         },
         [ThumbnailPlugin(instanceRef)]
@@ -82,7 +82,7 @@ export function ProductSelected() {
         <SelectedContainer>
             <ScrollToTop/>
             <BannerLogo className={`${brand}`}>
-                <img src={brand === 'Arno' ? Arno : brand === 'Mallory' ? Mallory : Britania} alt="Logo" />
+                <img src={brand === 'Arno' ? Arno : brand === 'Mallory' ? Mallory : Britania} className={`${brand}fan`} alt="Logo" />
             </BannerLogo>
 
             <InfoProduct>
@@ -91,7 +91,7 @@ export function ProductSelected() {
                         {selectedProduct?.imagens.map((imagens, index) => {
                             return (
 
-                                <div className="keen-slider__slide">
+                                <div className="keen-slider__slide" key={`Fan${index}`}>
                                     <img src={isProduction ? imagens : `../../public${imagens}`} alt="" />
                                 </div>
 
@@ -105,7 +105,7 @@ export function ProductSelected() {
 
                         {selectedProduct?.imagens.map((imagens, index) => {
                             return (
-                                <div className="keen-slider__slide item">
+                                <div className="keen-slider__slide item" key={index}>
                                     <button onClick={() => setImage(index)}>
                                         <img src={imagens} alt="" />
                                     </button>

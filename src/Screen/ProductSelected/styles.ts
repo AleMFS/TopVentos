@@ -18,18 +18,29 @@ export const SelectedContainer = styled.div`
 
 export const BannerLogo = styled.section`
 width: 100%;
-padding: 1rem;
+margin-bottom: 1rem;
+
 
 &.Arno{
     background: #FFF;
 }
-&.Britania{
-    background: ${theme => theme.theme.colors["purple-300"]};
+&.Britânia{
+   
+@media(max-width:640px){
+    img{
+        width: 50%;
+    }
+}
+   
 }
 &.Mallory {
     background: #000;
 }
 
+@media (max-width:640px){
+ 
+}
+  
 `
 
 export const InfoProduct = styled.section`
@@ -60,6 +71,8 @@ export const Product = styled.div`
 `
 export const Info = styled.div`
     display: flex;
+    
+    
     min-width: 100%;
     padding: 1rem;
     div{

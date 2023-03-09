@@ -42,6 +42,10 @@ export const BaseDescription = styled.div`
         font-size: 1.75rem;
         color: #eb322f;
     }
+    @media (max-width:640px){
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
 `
 
 export const DescriptionProducts = styled(BaseDescription)`  
