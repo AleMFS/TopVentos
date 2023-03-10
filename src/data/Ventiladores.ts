@@ -569,6 +569,77 @@ export const Ventiladores: FansProps[] =
 
             ], banner: "https://mallorygroup.vteximg.com.br/arquivos/ids/158888/banner-site-mallory.png?v=637952322507330000"
         },
+        {
+            id: 25,
+            helices: 6,
+            potencia: 140,
+            tamanho: "40",
+            valor: 242.91,
+            modelo: "VTX-40",
+
+            title: "Ventilador de Mesa Mondial Turbo 8 Pás VTX-40-8P",
+            marca: "Mondial",
+            tipo: "Mesa",
+            cor: "Preto ",
+            descricao: "Muito mais conforto, vento e potência. O Ventilador Turbo 8 Pás VTX-40-8P da Mondial conta com hélice de 8 pás, que possui melhor design aerodinâmico, maior vazão de ar e melhor desempenho. São 140W de potência que proporcionam um ambiente fresco e arejado. Super silencioso, o ventilador vai trazer bem estar para toda a sua família. Conte com três velocidades: mais potente, mais confortável ou mais silenciosa, ideal para hora de dormir. Sua inclinação vertical regulável permite que você direcione o fluxo de ar e o sistema oscilante a ampla distribuição para arejar o ambiente inteiro. A Mondial é a marca de eletrodomésticos mais vendida do Brasil e a escolha de milhões de consumidores. Sempre inovando e buscando soluções para o bem-estar das pessoas, oferece uma linha completa de produtos. Em constantes pesquisas junto aos consumidores, seu portfólio ganha destaque na qualidade, no design moderno e na excelente relação custo x benefício.",
+            imagens: [
+                "/images/ventiladores/Mondial/Mesa/VTX40/0.png",
+                "/images/ventiladores/Mondial/Mesa/VTX40/1.png",
+                "/images/ventiladores/Mondial/Mesa/VTX40/2.png",
+                "/images/ventiladores/Mondial/Mesa/VTX40/3.png",
+                "/images/ventiladores/Mondial/Mesa/VTX40/4.png",
+                "/images/ventiladores/Mondial/Mesa/VTX40/5.png",
+
+
+            ], banner: "/images/ventiladores/Mondial/Banner.png"
+        },
+        {
+            id: 26,
+            helices: 6,
+            potencia: 140,
+            tamanho: "40",
+            valor: 170.00,
+            modelo: "V40-W",
+
+            title: "Ventilador de Mesa Maxi Power com 6 Pás 40cm V-40-W",
+            marca: "Mondial",
+            tipo: "Mesa",
+            cor: "Branco ",
+            descricao: "6 pás muito + vento - A hélice de 6 pás possui melhor design aerodinâmico permitindo a maior vazão do ar./ 140W de potência - Muito + potente proporciona um ambiente mais fresco e arejado/ Silencioso -Menos barulho proporcionando bem estar para toda família/ Controle de Velocidade - 3 Velocidades, máxima (muito + vento 6 pás), Média (conforto), mínima (silencioso/dormir)/ Inclinação vertical regulável - Direciona o fluxo do ar/ Sistema oscilante - Permite ampliar distribuição de ar pelo ambiente.",
+            imagens: [
+                "/images/ventiladores/Mondial/Mesa/V40W/0.png",
+                "/images/ventiladores/Mondial/Mesa/V40W/1.png",
+                "/images/ventiladores/Mondial/Mesa/V40W/2.png",
+                "/images/ventiladores/Mondial/Mesa/V40W/3.png",
+                "/images/ventiladores/Mondial/Mesa/V40W/4.png",
+                "/images/ventiladores/Mondial/Mesa/V40W/5.png",
+
+
+            ], banner: "/images/ventiladores/Mondial/Banner.png"
+        },
+        {
+            id: 27,
+            helices: 8,
+            potencia: 140,
+            tamanho: "40",
+            valor: 242.91,
+            modelo: "VTX40AP",
+
+            title: "Ventilador de Mesa Turbo Mondial Turbo 40cm 8 Pás VTX-40-8P-AP",
+            marca: "Mondial",
+            tipo: "Mesa",
+            cor: "Preto e Azul ",
+            descricao: "Com 40 cm, 8 pás azuis e 3 velocidades, o Ventilador Super Turbo VTX-40-8P-AP preto é muito mais vento. Ele tem baixo nível de ruído, sistema oscilante lateral, inclinação vertical regulável, além de ser super prático e potente. É o 1º ventilador com 8 pás do brasil. Sua hélice tem design aerodinâmico, o que torna o ambiente mais fresco e arejado. Ele faz menos barulho: com qualquer uma das 3 velocidades você dorme com ventinho e silêncio garantidos. Para ambientes mais amplos você pode usar seu sistema oscilante. Já sua inclinação vertical regulável direciona o fluxo de ar para cima ou para baixo. Como a grade frontal é removível, ele ainda é fácil de montar e desmontar para limpeza. Fácil de carregar e seguro: ele tem alça para transporte e a base antiderrapante traz mais segurança. O Ventilador 40 cm Super Turbo 8 Pás VTX-40-8P-AP foi desenvolvido para uso doméstico, sendo melhor para uso residencial. 1 ano de garantia Mondial.",
+            imagens: [
+                "/images/ventiladores/Mondial/Mesa/VTX40AP/0.png",
+                "/images/ventiladores/Mondial/Mesa/VTX40AP/1.png",
+                "/images/ventiladores/Mondial/Mesa/VTX40AP/2.png",
+                "/images/ventiladores/Mondial/Mesa/VTX40AP/3.png",
+                "/images/ventiladores/Mondial/Mesa/VTX40AP/4.png",
+
+
+            ], banner: "/images/ventiladores/Mondial/Banner.png"
+        },
 
 
 

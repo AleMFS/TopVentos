@@ -18,6 +18,7 @@ import {
 import "keen-slider/keen-slider.min.css"
 import ScrollToTop from "./components/ScrollTop";
 import { Informations } from "./components/Informations";
+import { FooterSelected } from "../../components/FooterSelected";
 
 
 
@@ -121,6 +122,7 @@ export function ProductSelected() {
 
             </InfoProduct>
             <Description product={selectedProduct} />
+            <FooterSelected />
 
         </SelectedContainer>
     )

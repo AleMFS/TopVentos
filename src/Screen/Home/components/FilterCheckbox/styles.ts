@@ -41,7 +41,7 @@ export const Category = styled(BaseCategory)`
 span{
 
 width: 80%;
-
+margin-top: 0.5rem;
 border-bottom: 1px solid #114074;
 }    
 `
@@ -57,6 +57,7 @@ export const Brand = styled(BaseCategory)`
 width: 80%;
 
 border-bottom: 1px solid #114074;
+margin-top: 0.5rem;
 } 
 
 `

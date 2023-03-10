@@ -50,6 +50,14 @@ export function FilterCheckbox({ filtroType, filtroSize,filtrosBrand }: props) {
                         id="" />
                     Mallory
                 </label>
+                <label>
+                    <input
+                        type="checkbox"
+                        name="Mallory"
+                        onChange={() => handleBrand("Mondial")}
+                        id="" />
+                    Mondial
+                </label>
                 <span></span>
             </Brand>
             <Category>

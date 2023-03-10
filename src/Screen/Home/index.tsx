@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import ReactPaginate from "react-paginate";
 import { CaretDown, CaretLeft, CaretRight, Faders } from "phosphor-react";
 import Banner from '../../../public/images/BannerT1.png'
+import { Footer } from "../../components/Footer";
 
 
 
@@ -254,7 +255,7 @@ export function Home() {
                     </ProductContainer>
                 )}
 
-
+            <Footer />
         </HomeCointainer>
     )
 }
