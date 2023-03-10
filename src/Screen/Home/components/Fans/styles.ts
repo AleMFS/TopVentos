@@ -12,6 +12,8 @@ export const Fan = styled.div`
 
         img{
            width: 100%;
+           
+
         }
         h3{
         font-family: 'PT Serif', serif;        

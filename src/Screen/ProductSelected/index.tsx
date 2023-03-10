@@ -107,7 +107,7 @@ export function ProductSelected() {
                             return (
                                 <div className="keen-slider__slide item" key={index}>
                                     <button onClick={() => setImage(index)}>
-                                        <img src={imagens} alt="" />
+                                        <img src={imagens} alt=""  />
                                     </button>
                                 </div>
                             )

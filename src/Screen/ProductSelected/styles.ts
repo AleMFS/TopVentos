@@ -22,7 +22,7 @@ margin-bottom: 1rem;
 
 
 &.Arno{
-    background: #FFF;
+    background: #f9f9f9;
 }
 &.Britânia{
    
@@ -61,6 +61,7 @@ export const Product = styled.div`
     justify-content: space-between;
     align-items: center;
     border-right: 1px solid gray;
+    background: #FFF;
     gap: 0.5rem;
     
     img{
@@ -89,7 +90,7 @@ export const Carossel = styled.div`
         
         
         border: 1px solid gray;
-        
+        background: #FFF;
       
       
        display: flex;
@@ -101,8 +102,9 @@ export const Carossel = styled.div`
             
         }
         img{
-            
-            
+        
+
+
         }
 
         

@@ -72,13 +72,13 @@ export function Home() {
             const newGeneros = [...typeFan];
             newGeneros.splice(index, 1);
             setTypeFan(newGeneros);
-            setCurrentPage(1)
+           
         }
-
+        setCurrentPage(1)
 
     };
     const handleSizeFilter = (size: string) => {
-        setTimeout(() => {
+        
             const index = sizeFan.indexOf(size);
             if (index === -1) {
                 // adiciona o tipo selecionado ao array de category
@@ -88,14 +88,16 @@ export function Home() {
                 const newGeneros = [...sizeFan];
                 newGeneros.splice(index, 1);
                 setSizeFan(newGeneros);
-                setCurrentPage(1)
+                
             }
-        }, 500);
+
+            setCurrentPage(1)
     }
 
     const fanFilter = shuffledItems.filter((product) => {
         if (typeFan.length === 0 && sizeFan.length === 0) {
             // se nenhum tipo ou tamanho estiver selecionado, exibe todos os ventiladores
+            
             return true;
         } else if (typeFan.length > 0 && sizeFan.length === 0) {
             // verifica se o tipo do ventilador está entre os tipos selecionados
