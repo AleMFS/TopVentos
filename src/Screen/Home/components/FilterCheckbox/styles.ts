@@ -16,6 +16,7 @@ export const BaseCategory = styled.div`
     flex-direction: column;
     //padding: 1rem 0 0 1rem; 
     gap: 0.25rem;
+    margin-top: 0.5rem;
     
     label{
         display: flex;
@@ -40,12 +41,22 @@ export const Category = styled(BaseCategory)`
 span{
 
 width: 80%;
-margin-top: 0.5rem;
+
 border-bottom: 1px solid #114074;
 }    
 `
 
 export const Size = styled(BaseCategory)`
 
-margin-top: 0.5rem;
+
+`
+
+export const Brand = styled(BaseCategory)`
+    span{
+
+width: 80%;
+
+border-bottom: 1px solid #114074;
+} 
+
 `

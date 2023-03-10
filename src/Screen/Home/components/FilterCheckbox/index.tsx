@@ -1,13 +1,14 @@
 
-import { Category, FilterCheckBoxContainer, Size } from "./styles";
+import { Brand, Category, FilterCheckBoxContainer, Size } from "./styles";
 
 interface props {
     filtroType: (tipo: string) => void
     filtroSize: (tipo: string) => void
-    opcoes: String[]
+    filtrosBrand: (tipo:string) => void
+    
 }
 
-export function FilterCheckbox({ filtroType, filtroSize, opcoes }: props) {
+export function FilterCheckbox({ filtroType, filtroSize,filtrosBrand }: props) {
 
     function handleType(tipo: string) {
         filtroType(tipo)
@@ -17,9 +18,43 @@ export function FilterCheckbox({ filtroType, filtroSize, opcoes }: props) {
         filtroSize(size)
     }
 
+    function handleBrand(brand: string){
+        filtrosBrand(brand)
+    }
+
     return (
         <FilterCheckBoxContainer>
+            <Brand>
+                <p>Marcas</p>
+                <label>
+                    <input
+                        type="checkbox"
+                        name="Arno"
+                        onChange={() => handleBrand("Arno")}
+                        id="" />
+                    Arno
+                </label>
+                <label>
+                    <input
+                        type="checkbox"
+                        name="Britânia"
+                        onChange={() => handleBrand("Britânia")}
+                        id="" />
+                    Britânia
+                </label>
+                <label>
+                    <input
+                        type="checkbox"
+                        name="Mallory"
+                        onChange={() => handleBrand("Mallory")}
+                        id="" />
+                    Mallory
+                </label>
+                <span></span>
+            </Brand>
             <Category>
+
+
                 <p>Categorias</p>
                 <label>
                     <input

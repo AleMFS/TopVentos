@@ -26,11 +26,14 @@ export interface FansProps {
 }
 export function Home() {
     const [shuffledItems, SetshuffledItems] = useState<FansProps[]>([])
-    const [typeFan, setTypeFan] = useState<String[]>([])
-    const [sizeFan, setSizeFan] = useState<string[]>([])
+    const [filter, setFilter] = useState<{ typeFan: string[], sizeFan: string[], marca: string[] }>({
+        typeFan: [],
+        sizeFan: [],
+        marca: [],
+    });
+
 
     const [isOpen, setIsOpen] = useState(false)
-
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
     useEffect(() => {
@@ -61,55 +64,61 @@ export function Home() {
         setIsOpen(!isOpen)
     }
 
+
     const handleTypeFilter = (type: string) => {
-
-        const index = typeFan.indexOf(type);
+        const index = filter.typeFan.indexOf(type);
         if (index === -1) {
-            // adiciona o tipo selecionado ao array de category
-            setTypeFan([...typeFan, type]);
+            setFilter(prevState => ({
+                ...prevState,
+                typeFan: [...prevState.typeFan, type],
+            }));
         } else {
-            // remove o tipo selecionado do array de category
-            const newGeneros = [...typeFan];
-            newGeneros.splice(index, 1);
-            setTypeFan(newGeneros);
-           
+            setFilter(prevState => ({
+                ...prevState,
+                typeFan: prevState.typeFan.filter(item => item !== type),
+            }));
         }
-        setCurrentPage(1)
-
+        setCurrentPage(1);
     };
+
     const handleSizeFilter = (size: string) => {
-        
-            const index = sizeFan.indexOf(size);
-            if (index === -1) {
-                // adiciona o tipo selecionado ao array de category
-                setSizeFan([...sizeFan, size]);
-            } else {
-                // remove o tipo selecionado do array de category
-                const newGeneros = [...sizeFan];
-                newGeneros.splice(index, 1);
-                setSizeFan(newGeneros);
-                
-            }
-
-            setCurrentPage(1)
-    }
-
-    const fanFilter = shuffledItems.filter((product) => {
-        if (typeFan.length === 0 && sizeFan.length === 0) {
-            // se nenhum tipo ou tamanho estiver selecionado, exibe todos os ventiladores
-            
-            return true;
-        } else if (typeFan.length > 0 && sizeFan.length === 0) {
-            // verifica se o tipo do ventilador está entre os tipos selecionados
-            return typeFan.includes(product.tipo);
-        } else if (typeFan.length === 0 && sizeFan.length > 0) {
-            // verifica se o tamanho do ventilador está entre os tamanhos selecionados
-            return sizeFan.includes(product.tamanho);
+        const index = filter.sizeFan.indexOf(size);
+        if (index === -1) {
+            setFilter(prevState => ({
+                ...prevState,
+                sizeFan: [...prevState.sizeFan, size],
+            }));
         } else {
-            // verifica se o tipo e o tamanho do ventilador estão entre os selecionados
-            return typeFan.includes(product.tipo) && sizeFan.includes(product.tamanho);
+            setFilter(prevState => ({
+                ...prevState,
+                sizeFan: prevState.sizeFan.filter(item => item !== size),
+            }));
         }
-    });
+        setCurrentPage(1);
+    };
+
+    const handleMarcaFilter = (marca: string) => {
+        const index = filter.marca.indexOf(marca);
+        if (index === -1) {
+            setFilter(prevState => ({
+                ...prevState,
+                marca: [...prevState.marca, marca],
+            }));
+        } else {
+            setFilter(prevState => ({
+                ...prevState,
+                marca: prevState.marca.filter(item => item !== marca),
+            }));
+        }
+        setCurrentPage(1);
+    };
+
+    const fanFilter = shuffledItems.filter(product =>
+        (filter.typeFan.length === 0 || filter.typeFan.includes(product.tipo))
+        && (filter.sizeFan.length === 0 || filter.sizeFan.includes(product.tamanho))
+        && (filter.marca.length === 0 || filter.marca.includes(product.marca))
+    );
+
 
 
     const [currentPage, setCurrentPage] = useState(1)
@@ -142,14 +151,7 @@ export function Home() {
             <BannerPage>
                 <img src={Banner} alt="" />
             </BannerPage>
-            <div className="area-carrosel">
-                <CarroselContainer>
-                    <p>marca1</p>
-                    <p>marca2</p>
-                    <p>marca3</p>
-                </CarroselContainer>
 
-            </div>
             {!isMobile ? (
                 <ProductContainer>
                     <ProductsContent>
@@ -159,7 +161,7 @@ export function Home() {
                                     <p>Filtrar</p>
                                 </div>
                             </FilterArea>
-                            <FilterCheckbox filtroType={handleTypeFilter} filtroSize={handleSizeFilter} opcoes={typeFan} />
+                            <FilterCheckbox filtroType={handleTypeFilter} filtroSize={handleSizeFilter} filtrosBrand={handleMarcaFilter} />
                         </Checkbox>
                         <div>
                             <div style={{ padding: '1rem' }}>
@@ -213,7 +215,7 @@ export function Home() {
                                         </button>
 
                                         <Checkbox className={isOpen ? 'open' : 'closed'}>
-                                            <FilterCheckbox filtroType={handleTypeFilter} filtroSize={handleSizeFilter} opcoes={typeFan} />
+                                            <FilterCheckbox filtroType={handleTypeFilter} filtroSize={handleSizeFilter} filtrosBrand={handleMarcaFilter} />
                                         </Checkbox>
 
                                     </ContainerFilter>
