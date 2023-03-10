@@ -4,6 +4,7 @@ import { BannerLogo, Carossel, Info, InfoProduct, Product, SelectedContainer } f
 import Arno from "/images/logos/Arno.png"
 import Britania from "/images/logos/Britania.png"
 import Mallory from "/images/logos/Mallory.png"
+import Mondial from "/images/logos/Mondial.png"
 import { MutableRefObject, useState } from "react";
 import { Description } from "./components/Description";
 
@@ -83,7 +84,7 @@ export function ProductSelected() {
         <SelectedContainer>
             <ScrollToTop/>
             <BannerLogo className={`${brand}`}>
-                <img src={brand === 'Arno' ? Arno : brand === 'Mallory' ? Mallory : Britania} className={`${brand}fan`} alt="Logo" />
+                <img src={brand === 'Arno' ? Arno : brand === 'Mallory' ? Mallory : brand === "Britânia" ? Britania : Mondial} className={`${brand}fan`} alt="Logo" />
             </BannerLogo>
 
             <InfoProduct>

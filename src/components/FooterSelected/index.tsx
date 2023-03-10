@@ -15,16 +15,16 @@ export function FooterSelected() {
                 <div>
                     <h3>Contato </h3>
                     <div className="contato">
-                        <a href="https://www.linkedin.com/in/alexandremfs/" target='_blank'>
-                            <LinkedinLogo size={40} color="#fafafa" />
+                        <a href="https://www.linkedin.com/in/alexandremfs/"  target='_blank'>
+                            <LinkedinLogo size={40} color="#fafafa" alt="Linkedin"/>
                             alexandremfs
                         </a>
                         <a href="https://github.com/AleMFS" target='_blank'>
-                            <GithubLogo size={40} color="#fafafa" />
+                            <GithubLogo size={40} color="#fafafa" alt="Github" />
                             AleMFS
                         </a>
                         <p>
-                            <EnvelopeSimpleOpen size={40} color="#fafafa" />
+                            <EnvelopeSimpleOpen size={40} color="#fafafa"  alt="E-mail"/>
                             Alexandre_MFS@outlook.com
                         </p>
                     </div>
