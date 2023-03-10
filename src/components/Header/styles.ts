@@ -21,11 +21,13 @@ export const HeaderContainer = styled.header`
         font-size: 1.5rem;
         color: ${color => color.theme.colors["purple-300"]};
         margin-right: 2rem;
+        cursor: pointer;
     }
 
     div{
         display: flex;
         gap: 0.75rem;
+        
     }
 
 `
